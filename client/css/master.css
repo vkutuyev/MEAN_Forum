@@ -1,0 +1,232 @@
+body{
+    background: #578EBF;
+    min-width: 560px;
+}
+#container{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+#container table th a{
+    color: yellow !important;
+}
+
+/* --- Login --- */
+#login{
+    text-align: center;
+}
+#loglabel{
+    font-size: 150px;
+    text-shadow: 0px 0px 25px black;
+}
+#loglabel:hover{
+    color: yellow;
+}
+#nameinput{
+    height: 150px;
+    width: 90%;
+    line-height: 150px;
+    font-size: 100px;
+    text-align: center !important;
+}
+#nameinput:hover{
+    color: yellow;
+}
+#namebtn{
+    height: 200px;
+    width: 500px;
+    box-shadow: 0px 0px 10px black;
+    border: 5px solid black;
+    border-radius: 45px;
+    font-size: 100px;
+    text-shadow: 0px 0px 15px black;
+}
+#namebtn:hover{
+    color: yellow;
+    box-shadow: 0px 0px 10px yellow;
+}
+/* ------------- */
+
+/* --- Header --- */
+#header{
+    margin-left: calc(100% - 300px);
+}
+#header a:hover{
+    color: yellow;
+}
+.onLink{
+    color: yellow;
+}
+/* -------------- */
+
+/* --- Dash --- */
+#nameDisp{
+    margin-left: 5%;
+}
+#showName{
+    color: yellow;
+}
+#tablebox{
+    width: 80% !important;
+    margin-left: 10%;
+}
+#topicsearch{
+    width: 150px;
+    margin-left: calc(90% - 150px);
+}
+#topicbox{
+    margin-top: 8% !important;
+}
+#topicbox label{
+    margin-left: 9%;
+    font-size: 25px;
+    color: yellow;
+}
+#topicform{
+    width: 50%;
+    margin-left: 10%;
+}
+#topicform textarea{
+    min-height: 100px;
+    font-size: 20px;
+    background-color: #1D5D97;
+}
+.input-field input[type=text]:focus {
+    border: 0px solid transparent;
+    box-shadow: 0 2px 0 0 yellow !important;
+}
+.input-field textarea:focus {
+    border: 2px solid yellow;
+}
+#catselect{
+    /*color: black;*/
+    width: 35%;
+    background-color: #1D5D97;
+}
+#catselect:hover{
+    border: 2px solid yellow;
+}
+#topicsubbtn{
+    background-color: #1D5D97;
+    margin-left: calc(100% - 140px);
+}
+#topicsubbtn:hover{
+    color: yellow;
+    border: 1px solid yellow;
+    box-shadow: 0px 0px 4px yellow;
+}
+/* ------------ */
+
+/* --- User display --- */
+#hugedisp{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+#hugedisp h1{
+    font-size: 150px;
+    text-shadow: 0px 0px 10px black;
+}
+.numdisp{
+    color: yellow;
+}
+/* -------------------- */
+
+/* --- Post display --- */
+#topicbox{
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 10%;
+}
+#topichead{
+    color: yellow;
+    font-weight: bold;
+}
+#topicOP{
+    margin-left: 75%;
+}
+hr.style-seven {
+    height: 30px;
+    width: 90%;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+#messageform{
+    margin-top: 0;
+}
+#msgname{
+    color: yellow;
+    margin-left: 10%;
+}
+#msgarea{
+    width: 50%;
+    margin-left: 10%;
+    min-height: 100px;
+    border: 2px solid yellow;
+}
+#msgbtn{
+    display: block;
+    margin-left: calc(60% - 224px);
+}
+#msgbtn:hover{
+    color: yellow;
+    border: 1px solid yellow;
+    box-shadow: 0px 0px 4px yellow;
+}
+/* -------------------- */
+
+/* --- post messages --- */
+.msgbox{
+    width: 80%;
+    margin-left: 10%;
+}
+.postname{
+    color: yellow;
+}
+.msgbox h4, h5{
+    display: inline;
+}
+.msgbreak{
+    width: 50%;
+    border-color: yellow;
+}
+.commentarea{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 50%;
+    border: 1px solid yellow;
+    font-size: 15px;
+}
+.commentbtn{
+    margin-left: calc(100% - 232px);
+}
+.commentbtn:hover{
+    color: yellow;
+    box-shadow: 0px 0px 4px yellow;
+}
+.commentbox{
+    margin-top: 2%;
+    margin-left: 15% !important;
+}
+.commentbox h5, h6{
+    display: inline;
+}
+#thumbup{
+    color: green;
+}
+#thumbdown{
+    color: red;
+}
+/* --------------------- */

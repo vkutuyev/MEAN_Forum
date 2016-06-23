@@ -1,0 +1,13 @@
+<div ng-controller='UsersController' id=login>
+
+    <div class="row">
+        <span id="loglabel">ENTER NAME</span>
+    </div>
+    <div class="row input-field">
+        <input type="text" id=nameinput ng-model='user.name'>
+    </div>
+    <div class="row">
+        <button type="button" id=namebtn ng-click='login()' ng-disabled='!user.name'>SUBMIT</button>
+    </div>
+
+</div>

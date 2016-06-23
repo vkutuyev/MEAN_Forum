@@ -1,0 +1,49 @@
+<div ng-controller='UsersController'>
+
+    <div id="header">
+        <a href="" ng-click='showUser(currentUser.name)'>Profile</a> |
+        <span class='onLink'>Dashboard</span> |
+        <a href="" ng-click='logout()'>Logout</a>
+    </div>
+
+    <h3 id="nameDisp">Welcome <span id='showName'>{{ currentUser.name }}</span>!</h3>
+
+    <div class="input-field">
+        <input type="text" placeholder='Search' ng-model='topic_filter' id=topicsearch>
+    </div>
+
+    <div id="tablebox">
+        <table id='topictble' class="striped">
+            <thead>
+                <th><a href="" ng-click="sort='category'; sortReverse=!sortReverse;">Category</th>
+                <th><a href="" ng-click="sort='topic'; sortReverse=!sortReverse;">Topic</th>
+                <th><a href="" ng-click="sort='OP'; sortReverse=!sortReverse;">Username</th>
+                <th><a href="" ng-click="sort='messages'; sortReverse=!sortReverse;">Messages</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat='post in posts | filter: topic_filter | orderBy: sort:sortReverse track by $index'>
+                    <td>{{ post.category }}</td>
+                    <td><a href="" ng-click='showTopic(post._id)'>{{ post.topic }}</a></td>
+                    <td><a href="" ng-click='showUser(post.OP)'>{{ post.OP }}</a></td>
+                    <td>{{ post.messages.length || 0 }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="topicbox" class='input-field'>
+        <label for="topicform" class='active'>Post New Topic</label>
+        <form id="topicform">
+
+            <input name='threadname' type="text" placeholder="Topic Name" ng-model='newPost.topic'>
+            <textarea name="threaddesc" rows="8" cols="40" placeholder="Description" ng-model='newPost.description'></textarea>
+            <select class="browser-default" name="catselect" id=catselect ng-model='newPost.category'>
+                <option value='' selected disabled>Category</option>
+                <option ng-repeat='cat in categories'>{{ cat }}</option>
+            </select>
+            <button type="button" id='topicsubbtn' ng-click='addPost()' ng-disabled="!newPost.topic || !newPost.description || !newPost.category">Submit</button>
+
+        </form>
+    </div>
+
+</div>

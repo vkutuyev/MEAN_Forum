@@ -1,0 +1,49 @@
+<div ng-controller='PostsController'>
+
+    <div id="header">
+        <a href="" ng-click='showUser(currentUser.name)'>Profile</a> |
+        <a href='#/dash'>Dashboard</a> |
+        <a href='' ng-click='logout()'>Logout</a>
+    </div>
+
+    <div id="topicbox">
+
+        <h2 id='topichead'>{{ showTopic.topic }}</h2>
+        <h4 id='topicdesc'>{{ showTopic.description }}</h4>
+        <h5 id='topicOP'>--{{ showTopic.OP }}</h5>
+
+    </div>
+
+    <hr class='style-seven'>
+
+    <div id="messageform">
+
+        <textarea id='msgarea' ng-model='newMessage.msgtext' placeholder="{{currentUser.name}} says..."></textarea>
+        <button type="button" id='msgbtn' ng-click='addMessage()'>Post Message</button>
+
+    </div>
+
+    <hr class='style-seven'>
+
+    <div class='msgbox row' ng-repeat='message in showTopic.messages track by $index'>
+
+        <i id='thumbup' class='material-icons' ng-click='like(message)'>thumb_up</i> {{ message.likes.length || 0 }}
+        <i id='thumbdown' class='material-icons' ng-click='dislike(message)'>thumb_down</i> {{ message.dislikes.length || 0 }}
+
+        <h4 class='postname'>{{ message.msgUser }}: </h4>
+        <h5>{{ message.msgtext }} </h5>
+
+        <div class="commentbox" ng-repeat='comment in message.comments track by $index'>
+            <h5 class='postname'>{{ comment.commentUser }}:</h5>
+            <h6>{{ comment.commenttext }}</h6>
+        </div>
+
+        <textarea class='commentarea' placeholder="{{currentUser.name}} says..." ng-model='newComment.commenttext'></textarea>
+        <button type="button" class='commentbtn' ng-click='addComment(message, newComment); newComment = {};'>Post Comment</button>
+
+        <hr class="msgbreak">
+
+    </div>
+
+
+</div>

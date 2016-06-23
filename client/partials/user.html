@@ -1,0 +1,17 @@
+<div ng-controller='UsersController'>
+
+    <div id="header">
+        <span class='onLink'>Profile</span> |
+        <a href='#/dash'>Dashboard</a> |
+        <a href='' ng-click='logout()'>Logout</a>
+    </div>
+
+    <h3 id="nameDisp">Username: <span id='showName'>{{ dispUser.name }}</span></h3>
+
+    <div id="hugedisp">
+        <h1><span class="numdisp">{{ dispUser.posts || 0 }}</span> Topics</h1>
+        <h1><span class="numdisp">{{ dispUser.replies || 0 }}</span> Replies</h1>
+        <h1><span class="numdisp">{{ dispUser.comments || 0 }}</span> Comments</h1>
+    </div>
+
+</div>
